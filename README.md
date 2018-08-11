@@ -1,3 +1,3 @@
 # HelloWorld
 Jenkins CICD practice
-success
+success failure
