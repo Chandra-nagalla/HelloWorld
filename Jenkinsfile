@@ -1,5 +1,5 @@
 pipeline {
-   echo 'CICD.....'
+   agent {label 'prd-tmt-jnk-slv-w2a-a'}
    stages {
 
             steps {
