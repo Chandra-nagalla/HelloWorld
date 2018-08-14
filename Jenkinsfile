@@ -9,7 +9,8 @@ node {
   stage 'Stage Build'
 
   //branch name from Jenkins environment variables
-  echo "My branch is: ${BRANCH_NAME}"
+  echo "My branch is: ${env.BRANCH_NAME}"
+  echo "${env.GIT_COMMIT}"
 
   def flavor = flavor(env.BRANCH_NAME)
   echo "Building flavor ${flavor}"
