@@ -12,7 +12,7 @@ node {
   //echo "My branch is: ${env.BRANCH_NAME}"
 
   //def flavor = flavor(env.BRANCH_NAME)
-  //echo "Building flavor ${flavor}"
+  echo "Building flavor ${flavor}"
 
   //build your gradle flavor, passes the current build number as a parameter to gradle
   sh "./gradlew assembleDebug"
