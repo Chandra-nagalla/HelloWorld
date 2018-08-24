@@ -19,6 +19,13 @@ plugins {
     id "org.sonarqube" version "2.5"
 }
 
+sonarqube {
+    properties {
+        property "sonar.projectName", "Java :: sample Portal application :: Portal application description "
+        property "sonar.projectKey", "org.sonarqube:portalApp"
+    }
+}
+
 allprojects {
     repositories {
         google()
