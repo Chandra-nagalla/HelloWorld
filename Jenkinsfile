@@ -6,6 +6,6 @@ node {
               sh './gradlew clean assembleRelease'
           }
           stage('Stage Archive'){
-          archiveArtifacts artifacts: 'app/build/outputs/apk/*.apk', fingerprint: true
+          archiveArtifacts artifacts: 'app/build/outputs/apk/release/*.apk', fingerprint: true
           }
 }
