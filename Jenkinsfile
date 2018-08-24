@@ -4,7 +4,7 @@ node {
           }
           stage('build apk'){
               echo "My branch is: ${env.BRANCH_NAME}"
-              sh './gradlew build'
+              sh './gradlew clean assembleRelease'
           }
           stage('Stage Archive'){
           archiveArtifacts artifacts: 'app/build/outputs/apk/release/*.apk', fingerprint: true
