@@ -3,6 +3,7 @@ node {
               git 'https://github.com/Mokshithasekhar/HelloWorld.git'
           }
           stage('build apk'){
+              echo "My branch is: ${env.BRANCH_NAME}"
               sh './gradlew clean assembleRelease'
           }
           stage('Stage Archive'){
