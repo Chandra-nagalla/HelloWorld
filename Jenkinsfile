@@ -10,11 +10,9 @@ node {
           }
 
           stage('SonarQube analysis') {
-                        withSonarQubeEnv('Sonar1') {
-                          // requires SonarQube Scanner for Gradle 2.1+
-                          // It's important to add --info because of SONARJNKNS-281
-                          sh './gradlew sonarqube -Dsonar.host.url=http://localhost:9000/'
-                        }
+
+                          sh './gradlew sonarqube -Dsonar.login='08184f005edaf5ca03b27375f2bf0f02bd83ef7c' -Dsonar.projectKey='my:project' -Dsonar.host.url=http://localhost:9000/'
+
           }
 
 }
