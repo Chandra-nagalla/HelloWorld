@@ -19,6 +19,13 @@ plugins {
 }
 
 
+sonarqube {
+    properties {
+        property 'sonar.host.url', 'http://localhost:9000'
+        property 'sonar.projectKey', 'my:project'
+        property 'sonar.projectName', 'MyProject'
+    }
+}
 
 allprojects {
     repositories {
