@@ -11,7 +11,8 @@ node {
 
           stage('SonarQube analysis') {
 
-                          sh './gradlew --info sonarqube'
+                         // sh './gradlew --info sonarqube'
+                        sh  "./gradlew sonarqube -Dsonar.login='08184f005edaf5ca03b27375f2bf0f02bd83ef7c' -Dsonar.projectKey='my:project'  -Dsonar.host.url=http://localhost:9000/"
 
           }
 
