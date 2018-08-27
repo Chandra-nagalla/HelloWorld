@@ -26,6 +26,15 @@ sonarqube {
         property 'sonar.host.url', 'http://localhost:9000'
         property 'sonar.projectKey', 'my:project'
         property 'sonar.projectName', 'MyProject'
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.sources", "./src/main/java/"
+        property "sonar.binaries", "/intermediates/classes/dev/debug"
+        property "sonar.java.binaries", "${project.buildDir}/intermediates/classes/dev/debug"
+        property "sonar.coverage.exclusions", " **/R.class , **/R\$*.class, **/BuildConfig.*, **/Manifest*.*, **/*Test*.*, **/android/**/*.*, **/*Binding.class, **/com/tmobile/tmte/controller/games/**/*.*, **/com/tmobile/tmte/view/fragments/settings/**/*.*, **/com/tmobile/tmte/view/topsnackbar/**/*.*, **/com/tmobile/tmte/analytics/ga/**/*.*, **/com/tmobile/tmte/utils/TmteConstants.java, **/com/tmobile/tmte/controller/message/**/*.*, **/com/tmobile/tmte/utils/TMTEErrorCode.java , **/com/tmobile/tmte/apptentive/**/*.*, **/com/tmobile/tmte/view/customviews/SwipeLayout.java, **/com/tmobile/tmte/models/**/*.*"
+        property "sonar.exclusions", "build/**,**/*.png,*.iml, **/*generated*,"
+        property "sonar.import_unknown_files", true
+        property "sonar.tests", "./src/test/, ./src/androidTest/"
+        property "sonar.java.test.binaries", "${project.buildDir}/intermediates/classes/dev/debug"
     }
 }
 
