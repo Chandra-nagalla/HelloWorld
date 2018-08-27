@@ -11,13 +11,11 @@ node {
 
           stage('SonarQube analysis') {
 
-                          try {
-                          sh './gradlew clean sonarqube'
-                          } catch (e) {
-                          emailext attachLog: true, body: 'See attached log', subject: 'BUSINESS Build Failure', to: 'chandra4188@gmail.com'
-                          step([$class: 'WsCleanup'])
-                          return
-                          }
+                         withSonarQubeEnv('Sonar1') {
+                                         // requires SonarQube Scanner for Gradle 2.1+
+                                         // It's important to add --info because of SONARJNKNS-281
+                                         sh './gradlew --info sonarqube'
+                                       }
 
           }
 
